@@ -1,5 +1,5 @@
 astroid==1.6.5
-Django==2.1.2
+Django==2.1.15
 django-appconf==1.0.2
 django-imagekit==4.0.2
 ikp3db==1.1.4
