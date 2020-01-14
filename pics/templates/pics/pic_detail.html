@@ -1,0 +1,14 @@
+{% extends 'pics/base.html' %}
+
+{% block content %}
+    <div>
+    <img src="{{ baseUrl }}/{{ pic.image.url }}">
+    <form action="{% url 'pics_update'%}" method="POST">{% csrf_token %}
+        <button type='submit' class="pure-button pure-button-primary">削除</button>
+        <input type="hidden" value={{ pic.pk }} name='pk'>
+    </form>
+    <form action="{% url 'pic_list' %}" method="GET" enctype="multipart/form-data">   
+        <button type='submit' class="pure-button">戻る</button>
+    </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% load static %}
+{% static "" as baseUrl %}
+<html>
+<head>
+    <meta charser="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    <title>serverless-spa</title>
+    <link rel="stylesheet" href="{% static 'css/picture.css' %}">
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <a id='lihead' href="#">Photo Gallery</a>
+            <a href="{% url 'logout' %}">ログアウト</a>
+        </div>
+        {% block content %}
+        {% endblock %}
+        <div class="footer">
+            This sample app was made by Keisuke Nishitani.
+        </div>
+    </div>
+</body>
+</html>
